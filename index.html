@@ -1,14 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadades bàsiques del document -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project IAG</title>
+    <title>BrandNewDAI</title>
+
+    <!-- Enllaç al full d’estils extern -->
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>Final Project IAG</h1>
-    <p>This is a simple HTML page for the final project.</p>
+
+    <!-- =========================
+         CAPÇALERA (NAVBAR)
+         ========================= -->
+    <nav class="navbar">
+
+        <!-- Logo del projecte -->
+        <div class="logo">BrandNewDAI</div>
+
+        <!-- Menú de navegació principal -->
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="design.html">Design Brand</a>
+            </li>
+            <li class="menu-item">
+                <a href="edit.html">Edit Brand</a>
+            </li>
+            <li class="menu-item">
+                <a href="generate.html">Generate Content</a>
+            </li>
+        </ul>
+
+        <!-- Part dreta de la navbar (cerca + icones) -->
+        <div class="nav-right">
+
+            <!-- Cercador -->
+            <div class="search-container">
+                <img src="Assets/SearchIcon.svg" class="search-icon" alt="">
+                <input type="text" placeholder="Search..." class="search">
+            </div>
+
+            <!-- Icones d'accions -->
+            <img src="Assets/NotificationsIcon.svg" class="icon" alt="">
+            <img src="Assets/SettingsIcon.svg" class="icon" alt="">
+            <img src="Assets/UserIcon2.svg" class="icon user" alt="">
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         SECCIÓ HERO (INTRO)
+         ========================= -->
+    <section class="hero">
+
+        <!-- Text principal -->
+        <div class="hero-text">
+
+            <h1>
+                Ideate and <span>execute</span><br>
+                your branding
+            </h1>
+
+            <p>
+                Transform abstract vision into concrete brand identity.
+                Leverage high-end editorial AI tools to craft logos, palettes,
+                and social campaigns in a digital workspace designed for masters.
+            </p>
+
+            <!-- Botons d’acció -->
+            <div class="buttons">
+                <button class="primary">Get Started</button>
+                <button class="secondary">View Portfolio</button>
+            </div>
+
+        </div>
+
+        <!-- Imatge decorativa del hero -->
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/400" alt="AI face">
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓ DE TARGETES
+         ========================= -->
+    <section class="cards">
+
+        <!-- CARD 1 -->
+        <div class="card">
+
+            <div class="card-title">
+                <img src="Assets/DesignBrandIcon.svg">
+                <h3>Design Brand</h3>
+            </div>
+
+            <p>
+                AI-powered creation that translates your core values into visual DNA.
+                Instant logos, icons, and type systems.
+            </p>
+
+            <a href="design.html" class="cta cta-pink">
+                <span>EXPLORE ENGINE</span>
+                <img src="Assets/ArrowRightIcon1.svg">
+            </a>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+
+            <div class="card-title">
+                <img src="Assets/EditBrandIcon.svg">
+                <h3>Edit Brand</h3>
+            </div>
+
+            <p>
+                Sophisticated refinement tools for precision control.
+                Tweak nodes, adjust kerning, and balance palettes.
+            </p>
+
+            <div class="cta cta-orange">
+                <span>OPEN WORKSPACE</span>
+                <img src="Assets/ArrowRightIcon2.svg">
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+
+            <div class="card-title">
+                <img src="Assets/GenerateContentIcon.svg">
+                <h3>Generate Content</h3>
+            </div>
+
+            <p>
+                Deploy your brand across social media and ads.
+                One click to generate consistent campaigns.
+            </p>
+
+            <div class="cta cta-pink2">
+                <span>LAUNCH CAMPAIGN</span>
+                <img src="Assets/ArrowRightIcon3.svg">
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
+
 </html>

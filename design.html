@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Design Brand</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR (mateixa que abans) -->
+    <nav class="navbar">
+        <div class="logo">BrandNewDAI</div>
+
+        <ul class="menu">
+            <li class="menu-item active">Design Brand</li>
+            <li class="menu-item">Edit Brand</li>
+            <li class="menu-item">Generate Content</li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="search-container">
+                <img src="Assets/SearchIcon.svg" class="search-icon">
+                <input type="text" placeholder="Search..." class="search">
+            </div>
+
+            <img src="Assets/NotificationsIcon.svg" class="icon">
+            <img src="Assets/SettingsIcon.svg" class="icon">
+            <img src="Assets/UserIcon2.svg" class="icon user">
+        </div>
+    </nav>
+
+
+    <!-- CONTINGUT PRINCIPAL -->
+    <section class="design-container">
+
+        <!-- ESQUERRA (FORM) -->
+        <div class="form-section">
+
+            <h1>Design brand</h1>
+            <p class="subtitle">
+                Refine your brand's digital soul through AI-driven craftsmanship.
+            </p>
+
+            <label>BRAND NAME</label>
+            <input type="text" placeholder="e.g. Lumina Arch">
+
+            <label>BRAND PURPOSE</label>
+            <textarea placeholder="Describe the mission..."></textarea>
+
+            <label>AESTHETIC REFERENCES</label>
+
+            <div class="references">
+                <div class="ref-card active">
+                    Ethereal Minimal
+                </div>
+
+                <div class="ref-card">
+                    Brutalist Edge
+                </div>
+            </div>
+
+            <button class="upload">+ Upload Reference</button>
+
+            <div class="actions">
+                <button class="primary icon-btn">
+                    <img src="Assets/RegenerateIcon.svg" alt="">
+                    Regenerate
+                </button>
+                <button class="secondary icon-btn">
+                    Accept
+                    <img src="Assets/AcceptIcon.svg" alt="">
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- DRETA (RESULTATS) -->
+        <div class="result-section">
+
+            <div class="preview">
+                <h2>LUMINAARCH</h2>
+                <p>VISIONARY DESIGN SYSTEMS</p>
+            </div>
+
+            <div class="grid">
+                <div class="box box-header">
+                    <span>Palette</span>
+                    <img src="Assets/RedoPaletteIcon.svg" alt="">
+                </div>
+                <div class="box box-header">
+                    <span>Typography</span>
+                    <img src="Assets/RedoPaletteIcon.svg" alt="">
+                </div>
+            </div>
+
+            <div class="recommendation">
+                AI Recommendation: Neon Pink fits well with brutalist aesthetic.
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        const items = document.querySelectorAll(".menu-item");
+
+        // Seleccionem el primer (Design Brand)
+        const defaultItem = items[0];
+
+        items.forEach(item => {
+
+            item.addEventListener("mouseenter", () => {
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+            });
+
+            item.addEventListener("mouseleave", () => {
+                items.forEach(i => i.classList.remove("active"));
+                defaultItem.classList.add("active");
+            });
+
+        });
+    </script>
+
+    <script>
+        const refs = document.querySelectorAll(".ref-card");
+
+        refs.forEach(ref => {
+            ref.addEventListener("click", () => {
+
+                // treure selecció de totes
+                refs.forEach(r => r.classList.remove("active"));
+
+                // activar la clicada
+                ref.classList.add("active");
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
