@@ -158,8 +158,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Aesthetic reference card selection
+    const refCards = document.querySelectorAll(".ref-card");
+    refCards.forEach(card => {
+        card.addEventListener("click", () => {
+            refCards.forEach(c => c.classList.remove("active"));
+            card.classList.add("active");
+        });
+    });
+
     // Load files on page load if we are on edit.html
     if (window.location.pathname.includes("edit.html")) {
         loadFiles();
     }
 });
+
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Visual feedback
+        if (element) {
+            element.classList.add("copied");
+            const hexSpan = element.querySelector(".hex-code");
+            const originalText = hexSpan.innerText;
+            hexSpan.innerText = "COPIED!";
+            
+            setTimeout(() => {
+                element.classList.remove("copied");
+                hexSpan.innerText = originalText;
+            }, 1500);
+        }
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}

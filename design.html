@@ -60,16 +60,14 @@
             <label>AESTHETIC REFERENCES</label>
 
             <div class="references">
-                <div class="ref-card active">
-                    Ethereal Minimal
-                </div>
-
-                <div class="ref-card">
-                    Brutalist Edge
-                </div>
+                <div class="ref-card active">Ethereal Minimal</div>
+                <div class="ref-card">Brutalist Edge</div>
+                <div class="ref-card">Cyberpunk Neon</div>
+                <div class="ref-card">Eco Organic</div>
+                <div class="ref-card">Swiss Modernism</div>
+                <div class="ref-card">Retro Futurism</div>
+                <div class="ref-card">Luxurious Gold</div>
             </div>
-
-            <button class="upload">+ Upload Reference</button>
 
             <div class="actions">
                 <button class="primary icon-btn">
@@ -89,25 +87,67 @@
         <div class="result-section">
 
             <div class="preview">
+                <span class="preview-label">BRAND IDENTITY</span>
                 <h2>LUMINAARCH</h2>
-                <p>VISIONARY DESIGN SYSTEMS</p>
+                <img src="user/media/logo.jpg">
             </div>
 
             <div class="grid">
-                <div class="box box-header">
-                    <span>Palette</span>
-                    <img src="Assets/RedoPaletteIcon.svg" alt="">
+                <div class="box">
+                    <div class="box-header">
+                        <h3>Palette 1/3</h3>
+                        <img src="Assets/RedoPaletteIcon.svg" alt="">
+                    </div>
+                    <div class="palette-preview">
+                        <div class="swatch-container" onclick="copyToClipboard('#FF6BB8', this)">
+                            <div class="swatch" style="background: #FF6BB8;"></div>
+                            <span class="hex-code">#FF6BB8</span>
+                        </div>
+                        <div class="swatch-container" onclick="copyToClipboard('#F98D15', this)">
+                            <div class="swatch" style="background: #F98D15;"></div>
+                            <span class="hex-code">#F98D15</span>
+                        </div>
+                        <div class="swatch-container" onclick="copyToClipboard('#2a1b14', this)">
+                            <div class="swatch" style="background: #2a1b14;"></div>
+                            <span class="hex-code">#2a1b14</span>
+                        </div>
+                        <div class="swatch-container" onclick="copyToClipboard('#ffffff', this)">
+                            <div class="swatch" style="background: #ffffff;"></div>
+                            <span class="hex-code">#ffffff</span>
+                        </div>
+                        <div class="swatch-container" onclick="copyToClipboard('#888888', this)">
+                            <div class="swatch" style="background: #888888;"></div>
+                            <span class="hex-code">#888888</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="box box-header">
-                    <span>Typography</span>
-                    <img src="Assets/RedoPaletteIcon.svg" alt="">
+                <div class="box">
+                    <div class="box-header">
+                        <h3>Typography</h3>
+                        <img src="Assets/RedoPaletteIcon.svg" alt="">
+                    </div>
+                    <div class="typo-grid">
+                        <div class="typo-item">
+                            <span class="typo-label">Title</span>
+                            <h1 class="typo-example h1">The visionary soul</h1>
+                        </div>
+                        <div class="typo-item">
+                            <span class="typo-label">Subtitle</span>
+                            <h2 class="typo-example h2">Digital identity crafted by AI</h2>
+                        </div>
+                        <div class="typo-item">
+                            <span class="typo-label">Body Text</span>
+                            <p class="typo-example p">LuminaArch is a design system that explores the intersection of
+                                light and structure.</p>
+                        </div>
+                        <div class="typo-weights">
+                            <div class="weight-box bold">BOLD</div>
+                            <div class="weight-box regular">REGULAR</div>
+                            <div class="weight-box thin">THIN</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="recommendation">
-                AI Recommendation: Neon Pink fits well with brutalist aesthetic.
-            </div>
-
         </div>
 
     </section>

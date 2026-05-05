@@ -410,20 +410,36 @@ textarea {
 /* REFERENCES */
 .references {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
 }
 
 .ref-card {
-    background: #15151a;
-    padding: 20px;
-    border-radius: 10px;
+    background: #111;
+    padding: 12px 20px;
+    border-radius: 12px;
     cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    border: 1px solid #222;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ref-card:hover {
+    background: #1a1a1f;
+    color: #fff;
+    border-color: #444;
 }
 
 .ref-card.active {
-    border: 2px solid #ff4ecb;
+    background: #1a1a1f;
+    color: #fff;
+    border-color: #FF6BB8;
+    box-shadow: 0 0 15px rgba(255, 107, 184, 0.2);
 }
+
 
 /* BOTONS */
 .upload {
@@ -1527,5 +1543,142 @@ input:checked+.slider:before {
     opacity: 0.6;
 }
 
+/* Palette Preview Styles */
+.palette-preview {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
 
-
+.swatch-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.swatch {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hex-code {
+    font-size: 11px; /* Increased from 10px */
+    font-family: 'JetBrains Mono', monospace;
+    color: #888; /* Slightly brighter */
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.swatch-container:hover .swatch {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.swatch-container:hover .hex-code {
+    color: #fff;
+}
+
+.swatch-container.copied .hex-code {
+    color: #FF6BB8;
+}
+
+
+/* Typography Preview Styles */
+.typo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.typo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.typo-label {
+    font-size: 8px;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.typo-example {
+    margin: 0;
+    color: #fff;
+}
+
+.typo-example.h1 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.typo-example.h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #888;
+}
+
+.typo-example.p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.typo-weights {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+}
+
+.weight-box {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    background: #111;
+    font-size: 9px;
+    font-weight: 700;
+    text-align: center;
+    color: #444;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.weight-box.bold { font-weight: 800; color: #fff; }
+.weight-box.regular { font-weight: 400; color: #aaa; }
+.weight-box.thin { font-weight: 200; color: #666; }
+
+.weight-box:hover {
+    border-color: #555;
+    background: #1a1a1f;
+}
+
+
+/* Header Adjustments */
+.box-header h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+.preview-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #444;
+    display: block;
+    margin-bottom: 10px;
+}
