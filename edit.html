@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Brand - BrandNewDAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">BrandNewDAI</a>
+
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="design.html">Design Brand</a>
+            </li>
+            <li class="menu-item active">
+                <a href="edit.html">Edit Brand</a>
+            </li>
+            <li class="menu-item">
+                <a href="generate.html">Generate Content</a>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <img src="Assets/NotificationsIcon.svg" class="icon" alt="">
+            <img src="Assets/SettingsIcon.svg" class="icon" alt="">
+            <div class="user-profile">
+                <img src="Assets/UserIcon2.svg" class="icon user" alt="">
+                <div class="burger-icon">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- EDIT BRAND HEADER -->
+    <header class="page-header edit-header">
+        <div class="container">
+            <span class="eyebrow">BRAND ASSETS</span>
+            <div class="header-main">
+                <div class="title-group">
+                    <h1>Edit Brand</h1>
+                    <p>Refine your visual identity with AI-augmented tools. Adjust scaling, colors, and typography to
+                        achieve professional-grade consistency.</p>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="reset-link">Reset to Original</a>
+                    <button class="btn-save">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN EDIT WORKSPACE -->
+    <main class="workspace">
+        <div class="container edit-grid">
+            
+            <!-- LEFT COLUMN: FILE EXPLORER -->
+            <aside class="files-sidebar">
+                <div class="sidebar-header">
+                    <img src="Assets/ArchiveIcon.svg" alt="" class="small-icon">
+                    <h3>Uploaded Files</h3>
+                </div>
+                <div id="sidebar-file-list" class="sidebar-file-list">
+                    <!-- Files will be loaded here -->
+                    <p class="empty-msg">No files yet.</p>
+                </div>
+            </aside>
+
+            <!-- MIDDLE COLUMN: EDITING TOOLS -->
+            <div class="edit-main-column">
+
+                <!-- Upload Area -->
+                <section class="upload-zone" onclick="document.getElementById('file-input').click()">
+                    <div class="upload-content">
+                        <input type="file" id="file-input" style="display: none;" onchange="uploadFile(this)"
+                            accept=".png,.svg,.ai,.jpg,.jpeg">
+                        <img src="Assets/UploadIcon.svg" alt="" class="upload-icon">
+                        <h3>Upload Logo or Brand Assets</h3>
+                        <p>Drag and drop SVG, PNG or AI files</p>
+                    </div>
+                </section>
+
+                <!-- Workspace Preview -->
+                <section class="workspace-preview">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot orange"></span>
+                            <span class="dot pink"></span>
+                        </div>
+                        <span class="workspace-label">ACTIVE WORKSPACE: MAIN_LOGO_V2.SVG</span>
+                    </div>
+                    <div class="preview-canvas large">
+                        <div class="logo-preview">
+                            <img src="Assets/BrandLogoPlaceholder.png" alt="Logo">
+                        </div>
+                        <div class="toolbar-overlay">
+                            <button class="tool-btn"><img src="Assets/CropIcon.svg" alt=""></button>
+                            <button class="tool-btn"><img src="Assets/PaletteIcon.svg" alt=""></button>
+                            <button class="tool-btn"><img src="Assets/LayersIcon.svg" alt=""></button>
+                            <button class="tool-btn"><img src="Assets/BrushIcon.svg" alt=""></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bottom Cards -->
+                <div class="edit-bottom-row">
+                    <div class="edit-card">
+                        <div class="edit-card-header">
+                            <h3>Extract Palette</h3>
+                            <img src="Assets/MagicWandIcon.svg" alt="" class="card-icon-right">
+                        </div>
+                        <p>Generate colors from logo assets</p>
+                        <div class="palette-swatches">
+                            <div class="swatch" style="background: #FF6BB8;"></div>
+                            <div class="swatch" style="background: #F98D15;"></div>
+                            <div class="swatch" style="background: #222;"></div>
+                            <div class="swatch" style="background: #aaa;"></div>
+                            <div class="swatch add">+</div>
+                        </div>
+                    </div>
+                    <div class="edit-card">
+                        <div class="edit-card-header">
+                            <h3>Match Typography</h3>
+                            <div class="card-icon-right boxed">A</div>
+                        </div>
+                        <p>Find fonts that complement your logo</p>
+                        <div class="font-list">
+                            <div class="font-item">
+                                <span class="font-name">Plus Jakarta Sans</span>
+                                <span class="match-badge">98% MATCH</span>
+                            </div>
+                            <div class="font-item">
+                                <span class="font-name">Manrope</span>
+                                <span class="rec-badge">RECOMMENDED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: AI RECOMMENDATIONS -->
+            <aside class="recommendations-sidebar">
+                <div class="sidebar-header">
+                    <div class="icon-circle">
+                        <img src="Assets/BoltIcon.svg" alt="">
+                    </div>
+                    <div>
+                        <h3>AI Recommendations</h3>
+                        <span class="engine-label">NEON ATELIER ENGINE</span>
+                    </div>
+                </div>
+
+                <div class="rec-cards">
+                    <div class="rec-card-item contrast">
+                        <div class="rec-card-header">
+                            <span class="rec-label">VISUAL CONTRAST</span>
+                            <img src="Assets/InfoIcon.svg" alt="" class="info-icon">
+                        </div>
+                        <p>Your logo contrast is low for dark mode environments. We suggest adding a subtle <span
+                                class="highlight">#ff86c1</span> outer glow to improve visibility.</p>
+                        <a href="#" class="apply-btn">Apply Correction &rarr;</a>
+                    </div>
+
+                    <div class="rec-card-item scaling">
+                        <div class="rec-card-header">
+                            <span class="rec-label">SCALING INTELLIGENCE</span>
+                            <img src="Assets/WarningIcon.svg" alt="" class="info-icon">
+                        </div>
+                        <p>The fine lines in your logomark might disappear at favicon sizes (16px). Try the <span
+                                class="highlight">Simplified Geometry</span> preset.</p>
+                        <a href="#" class="apply-btn">Optimize Scalability &rarr;</a>
+                    </div>
+
+                    <div class="rec-card-item scanning">
+                        <p class="scanning-text">Scanning for alignment inconsistencies...</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="rec-card-item tip">
+                        <span class="rec-label pink">PRO TIP</span>
+                        <p>Use the 'Refine Edges' tool to auto-smooth vector paths exported from low-resolution raster
+                            assets.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- FAB -->
+    <div class="fab">
+        <img src="Assets/MagicWandIconWhite.svg" alt="">
+    </div>
+
+</body>
+
+</html>

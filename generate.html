@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Content - BrandNewDAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">BrandNewDAI</a>
+
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="design.html">Design Brand</a>
+            </li>
+            <li class="menu-item">
+                <a href="edit.html">Edit Brand</a>
+            </li>
+            <li class="menu-item active">
+                <a href="generate.html">Generate Content</a>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <img src="Assets/NotificationsIcon.svg" class="icon" alt="">
+            <img src="Assets/SettingsIcon.svg" class="icon" alt="">
+            <div class="user-profile">
+                <img src="Assets/UserIcon2.svg" class="icon user" alt="">
+                <div class="burger-icon">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT GENERATOR HEADER -->
+    <header class="page-header">
+        <div class="container">
+            <span class="eyebrow">CONTENT GENERATOR</span>
+            <div class="header-main">
+                <h1>Craft your <span>digital spark.</span></h1>
+                <div class="collaborators">
+                    <div class="avatars">
+                        <div class="avatar" style="background: #333;"></div>
+                        <div class="avatar" style="background: #444;"></div>
+                        <div class="avatar" style="background: #555;"></div>
+                    </div>
+                    <span>3 active collaborators in this atelier space.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WORKSPACE -->
+    <main class="workspace">
+        <div class="container grid-layout">
+            
+            <!-- LEFT PANEL: CONTROLS -->
+            <aside class="panel left-panel">
+                <section class="section">
+                    <label class="section-label"><img src="Assets/PlatformIcon.svg" alt="" class="small-icon"> PLATFORM</label>
+                    <div class="platform-grid">
+                        <button class="platform-btn active">
+                            <img src="Assets/InstagramIcon.svg" alt="">
+                            <span>Instagram</span>
+                        </button>
+                        <button class="platform-btn">
+                            <img src="Assets/TwitterIcon.svg" alt="">
+                            <span>Twitter</span>
+                        </button>
+                        <button class="platform-btn">
+                            <img src="Assets/AdIcon.svg" alt="">
+                            <span>Digital Ad</span>
+                        </button>
+                        <button class="platform-btn">
+                            <img src="Assets/OtherIcon.svg" alt="">
+                            <span>Other</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <label class="section-label"><img src="Assets/ToneIcon.svg" alt="" class="small-icon"> TONE OF VOICE</label>
+                    <div class="select-box">
+                        <span>Professional & Minimalist</span>
+                        <img src="Assets/ChevronDownIcon.svg" alt="" class="chevron">
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-header">
+                        <label class="section-label">BRAND ASSETS</label>
+                        <span class="badge live">LIVE</span>
+                    </div>
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <span>Logo Application</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <span>Color Mapping</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <button class="btn-generate">
+                    <img src="Assets/MagicIcon.svg" alt="">
+                    Generate Variations
+                </button>
+            </aside>
+
+            <!-- CENTER PANEL: PREVIEW -->
+            <section class="preview-area">
+                <div class="preview-canvas">
+                    <div class="canvas-content">
+                        <img src="Assets/PreviewPlaceholder.png" alt="Preview" id="main-preview">
+                        <div class="tag-b">B</div>
+                    </div>
+                    <div class="canvas-footer">
+                        <div class="footer-info">
+                            <span class="active-label">ACTIVE: INSTAGRAM POST</span>
+                            <span class="dimensions">(1080X1080)</span>
+                        </div>
+                        <div class="footer-actions">
+                            <img src="Assets/ZoomIcon.svg" alt="" class="action-icon">
+                            <img src="Assets/ShareIcon.svg" alt="" class="action-icon">
+                            <button class="btn-export">Export Asset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT PANEL: LAYOUTS & INSIGHTS -->
+            <aside class="panel right-panel">
+                <section class="section">
+                    <div class="section-header">
+                        <label class="section-label">Explore Layouts</label>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="layout-list">
+                        <div class="layout-card">
+                            <div class="layout-thumb" style="background: #1a1a1f;">
+                                <span class="number">1</span>
+                            </div>
+                            <div class="layout-info">
+                                <div>
+                                    <h4>Gradient Noir</h4>
+                                    <p>Modern Editorial</p>
+                                </div>
+                                <img src="Assets/HeartIcon.svg" alt="" class="heart-icon">
+                            </div>
+                        </div>
+                        <div class="layout-card active">
+                            <div class="layout-thumb" style="background: #111;">
+                                <div class="badge active-badge">ACTIVE</div>
+                            </div>
+                            <div class="layout-info">
+                                <div>
+                                    <h4>Minimal Typo</h4>
+                                    <p>High Impact</p>
+                                </div>
+                                <img src="Assets/HeartIconPink.svg" alt="" class="heart-icon">
+                            </div>
+                        </div>
+                        <div class="layout-card">
+                            <div class="layout-thumb" style="background: #222;">
+                                <img src="Assets/SwissGridPreview.png" alt="" class="thumb-img">
+                            </div>
+                            <div class="layout-info">
+                                <div>
+                                    <h4>Swiss Grid</h4>
+                                    <p>Structure & Balance</p>
+                                </div>
+                                <img src="Assets/HeartIcon.svg" alt="" class="heart-icon">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="insight-box">
+                    <div class="insight-header">
+                        <div class="dot orange"></div>
+                        <label>AI INSIGHTS</label>
+                    </div>
+                    <p>"Bold typography is currently performing 24% better on Instagram for your niche."</p>
+                    <a href="#" class="apply-link">APPLY SUGGESTION <img src="Assets/ArrowRightIcon.svg" alt=""></a>
+                </section>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FAB -->
+    <div class="fab">
+        <img src="Assets/SparklesIcon.svg" alt="">
+    </div>
+
+</body>
+
+</html>

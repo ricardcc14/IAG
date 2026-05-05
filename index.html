@@ -19,7 +19,7 @@
     <nav class="navbar">
 
         <!-- Logo del projecte -->
-        <div class="logo">BrandNewDAI</div>
+        <a href="index.html" class="logo">BrandNewDAI</a>
 
         <!-- Menú de navegació principal -->
         <ul class="menu">
@@ -34,19 +34,21 @@
             </li>
         </ul>
 
-        <!-- Part dreta de la navbar (cerca + icones) -->
+        <!-- Part dreta de la navbar (icones + burger) -->
         <div class="nav-right">
-
-            <!-- Cercador -->
-            <div class="search-container">
-                <img src="Assets/SearchIcon.svg" class="search-icon" alt="">
-                <input type="text" placeholder="Search..." class="search">
-            </div>
 
             <!-- Icones d'accions -->
             <img src="Assets/NotificationsIcon.svg" class="icon" alt="">
             <img src="Assets/SettingsIcon.svg" class="icon" alt="">
-            <img src="Assets/UserIcon2.svg" class="icon user" alt="">
+            
+            <div class="user-profile">
+                <img src="Assets/UserIcon2.svg" class="icon user" alt="">
+                <div class="burger-icon">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
         </div>
 
     </nav>
@@ -125,10 +127,10 @@
                 Tweak nodes, adjust kerning, and balance palettes.
             </p>
 
-            <div class="cta cta-orange">
+            <a href="edit.html" class="cta cta-orange">
                 <span>OPEN WORKSPACE</span>
                 <img src="Assets/ArrowRightIcon2.svg">
-            </div>
+            </a>
 
         </div>
 
@@ -145,10 +147,10 @@
                 One click to generate consistent campaigns.
             </p>
 
-            <div class="cta cta-pink2">
+            <a href="generate.html" class="cta cta-pink2">
                 <span>LAUNCH CAMPAIGN</span>
                 <img src="Assets/ArrowRightIcon3.svg">
-            </div>
+            </a>
 
         </div>
 
