@@ -1,0 +1,10 @@
+IMAGE_PROMPTS = {
+    "base_logo_design": "vector design, minimalist mark, {brand_name}, for {purpose}, {style} aesthetic, high contrast, professional branding, good resolution, {colors}"
+}
+
+TEXT_PROMPTS = {
+    "colour_palette": "You are a professional colour strategist with senior level experience. Design a functional brand color scheme for {brand_name} based on: {purpose}. Provide 5 hex codes. Output (IMPORTANT!): Return ONLY a JSON object with the following structure: {{ 'palette': [ {{ 'name': 'string', 'hex': 'string', 'type': 'primary|secondary|accent|neutral', 'explanation': 'string' }} ] }} DO NOT ADD ANY DESCRIPTION BEFORE OR AFTER, IF NOT IT WILL NOT WORK!",
+    "brand_identity": "You are a senior brand consultant. Define the identity for {brand_name} ({purpose}). Output (IMPORTANT!): Return ONLY a JSON object with the following structure: {{ 'brand_persona': 'string', 'core_values': ['string', 'string', 'string'], 'slogan': 'string' }} DO NOT ADD ANY DESCRIPTION BEFORE OR AFTER, IF NOT IT WILL NOT WORK!",
+    "name_ideas": "You are a creative naming expert. Generate 5 unique and catchy name ideas for a brand focused on {purpose} with a {style} aesthetic. Output (IMPORTANT!): Return ONLY a JSON object with the following structure: {{ 'naming_suggestions': [ {{ 'name': 'string', 'concept': 'string', 'vibe': 'string' }} ] }} DO NOT ADD ANY DESCRIPTION BEFORE OR AFTER, IF NOT IT WILL NOT WORK!",
+    "brand_tone": "You are a senior copywriter and brand strategist. Define the tone of voice for {brand_name} based on its purpose: {purpose}. Output (IMPORTANT!): Return ONLY a JSON object with the following structure: {{ 'tone_profile': {{ 'tone_name': 'string', 'formality_level': '1-10', 'enthusiasm': '1-10', 'vocabulary_style': 'string', 'voice_traits': ['string', 'string', 'string'], 'example_sentence': 'string' }} }} IT IS VERY IMPORTANT THAT YOU DO NOT ADD ANY DESCRIPTION BEFORE OR AFTER, IF NOT IT WILL NOT WORK!"
+}
